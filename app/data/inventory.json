@@ -1,0 +1,142 @@
+[
+    {
+        "sku": "APL001",
+        "name": "apple",
+        "price": 41.5,
+        "stock": 91,
+        "description": "Fresh red apple"
+    },
+    {
+        "sku": "BAN001",
+        "name": "banana",
+        "price": 24.9,
+        "stock": 111,
+        "description": "Ripe banana bunch"
+    },
+    {
+        "sku": "COF001",
+        "name": "coffee",
+        "price": 207.5,
+        "stock": 37,
+        "description": "Ground coffee 250g"
+    },
+    {
+        "sku": "TEA001",
+        "name": "tea",
+        "price": 149.4,
+        "stock": 60,
+        "description": "Assorted tea bags 50ct"
+    },
+    {
+        "sku": "MLK001",
+        "name": "milk",
+        "price": 99.6,
+        "stock": 80,
+        "description": "1L whole milk"
+    },
+    {
+        "sku": "BRD001",
+        "name": "bread",
+        "price": 83.0,
+        "stock": 50,
+        "description": "Whole grain bread loaf"
+    },
+    {
+        "sku": "EGG012",
+        "name": "eggs",
+        "price": 182.6,
+        "stock": 30,
+        "description": "Dozen free-range eggs"
+    },
+    {
+        "sku": "RCE001",
+        "name": "rice",
+        "price": 74.7,
+        "stock": 200,
+        "description": "White rice 1kg"
+    },
+    {
+        "sku": "SUG001",
+        "name": "sugar",
+        "price": 66.4,
+        "stock": 90,
+        "description": "White sugar 1kg"
+    },
+    {
+        "sku": "SLT001",
+        "name": "salt",
+        "price": 33.2,
+        "stock": 149,
+        "description": "Iodized salt 1kg"
+    },
+    {
+        "sku": "OLV500",
+        "name": "olive oil",
+        "price": 373.5,
+        "stock": 25,
+        "description": "Extra virgin olive oil 500ml"
+    },
+    {
+        "sku": "CHS200",
+        "name": "cheese",
+        "price": 249.0,
+        "stock": 35,
+        "description": "Cheddar cheese 200g"
+    },
+    {
+        "sku": "TMT001",
+        "name": "tomato",
+        "price": 49.8,
+        "stock": 110,
+        "description": "Fresh tomato"
+    },
+    {
+        "sku": "PTT001",
+        "name": "potato",
+        "price": 33.2,
+        "stock": 160,
+        "description": "Washed potatoes 1kg"
+    },
+    {
+        "sku": "ONN001",
+        "name": "onion",
+        "price": 41.5,
+        "stock": 130,
+        "description": "Yellow onions 1kg"
+    },
+    {
+        "sku": "CPK001",
+        "name": "coke",
+        "price": 91.3,
+        "stock": 70,
+        "description": "Coca-Cola 500ml"
+    },
+    {
+        "sku": "WTR500",
+        "name": "water",
+        "price": 58.1,
+        "stock": 200,
+        "description": "Mineral water 500ml"
+    },
+    {
+        "sku": "CHC100",
+        "name": "chocolate",
+        "price": 107.9,
+        "stock": 90,
+        "description": "Milk chocolate bar 100g"
+    },
+    {
+        "sku": "BIS200",
+        "name": "biscuits",
+        "price": 124.5,
+        "stock": 60,
+        "description": "Butter biscuits 200g"
+    },
+    {
+        "sku": "YGT150",
+        "name": "yogurt",
+        "price": 74.7,
+        "stock": 74,
+        "description": "Plain yogurt 150g"
+    }
+]

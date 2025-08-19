@@ -1,0 +1,12 @@
+# Pin versions known to work offline after model file downloads
+numpy>=1.22
+scipy>=1.10
+soundfile>=0.12
+sentence-transformers>=2.6.1
+faiss-cpu>=1.7.4
+pydantic>=2.7
+rich>=13.7
+whispercpp
+ollama
+sounddevice
+keyboard
