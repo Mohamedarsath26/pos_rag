@@ -13,29 +13,33 @@ A fully offline Point-of-Sale system powered by **Speech-to-Text (Whisper.cpp)**
 
 ---
 
-## 🚀 Project Architecture
+## 🚀 Project Architecture  
 
-The system follows a **modular, component-based architecture**:
+The system follows a **modular, component-based architecture**:  
 
-### 🔹 Core Components
+### 🔹 Core Components  
+
 1. **Speech-to-Text (STT) — `transcribe.py` & `main.py`**  
    - Converts spoken commands into text.  
    - Uses [whisper.cpp](https://github.com/ggerganov/whisper.cpp) CLI for local, high-performance transcription.  
-   - Includes microphone recording and WAV file input support.
+   - Includes microphone recording and WAV file input support.  
 
 2. **Retrieval-Augmented Generation (RAG) — `rag.py`**  
    - Manages product inventory with a **semantic search index**.  
-   - Matches spoken item names with the closest inventory item.
-
+   - Matches spoken item names with the closest inventory item.  
+   - Uses the **sentence-transformers model `all-MiniLM-L6-v2`** to generate embeddings.  
+   - Stores and searches embeddings efficiently with **[Faiss](https://github.com/facebookresearch/faiss)** (Facebook AI Similarity Search).  
+     - Faiss provides **fast vector similarity search** (cosine / L2 distance).  
+     - Ensures quick and accurate retrieval of matching products, even in large inventories.  
+ 
 3. **Large Language Model (LLM) — `llm.py`**  
    - Uses a small, offline-compatible model (e.g., `gemma3:1b` via Ollama).  
-   - Formats POS responses into natural, human-like confirmations and receipts.
+   - Formats POS responses into natural, human-like confirmations and receipts.  
 
 4. **POS Logic — `pos_logic.py`**  
    - Contains the **Cart** class to manage items, quantities, and totals.  
-   - Includes parsing logic (`parse_multi_items`) to extract item names and quantities from speech.
+   - Includes parsing logic (`parse_multi_items`) to extract item names and quantities from speech.  
 
----
 
 ## Setup Instructions
 
