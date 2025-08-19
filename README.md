@@ -18,7 +18,7 @@ A fully offline Point-of-Sale system powered by **Speech-to-Text (Whisper.cpp)**
 The system follows a **modular, component-based architecture**:
 
 ### 🔹 Core Components
-1. **Speech-to-Text (STT) — `stt.py` & `main.py`**  
+1. **Speech-to-Text (STT) — `transcribe.py` & `main.py`**  
    - Converts spoken commands into text.  
    - Uses [whisper.cpp](https://github.com/ggerganov/whisper.cpp) CLI for local, high-performance transcription.  
    - Includes microphone recording and WAV file input support.
