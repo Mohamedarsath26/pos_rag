@@ -41,15 +41,32 @@ The system follows a **modular, component-based architecture**:
    - Includes parsing logic (`parse_multi_items`) to extract item names and quantities from speech.  
 
 
-## Setup Instructions
+## ⚙️ Setup Instructions  
 
-Clone the Repository:
+Follow these steps to set up the Offline Voice-Activated POS System on your local machine.  
+> ⚠️ This project requires **Python 3.10** (recommended).  
+
+---
+
+### 1️⃣ Clone the Repository  
+```bash
 git clone https://github.com/Mohamedarsath26/pos_rag.git
 cd pos_rag
+```
 
-Install Python Dependencies:
-This project requires several Python packages. You can install them using pip:
-pip install rich sounddevice numpy
+### 2️⃣ Create a Virtual Environment (Recommended)
+
+🔹 On Windows
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### 3️⃣ Install Python Dependencies
+```bash
+pip install -r requirements.txt
+```
+
 
 ### 🔹 Gemma Model Setup (with Ollama)
 
