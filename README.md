@@ -13,35 +13,29 @@ A fully offline Point-of-Sale system powered by **Speech-to-Text (Whisper.cpp)**
 
 ---
 
-## Project Architecture
+## 🚀 Project Architecture
 
-The Offline Voice-Activated POS System is built with a modular, component-based architecture to enable fully offline operation. The core of the system is a central main.py loop that orchestrates interactions between the following key components:
+The system follows a **modular, component-based architecture**:
 
-Speech-to-Text (STT) (stt.py and main.py): This component is responsible for converting spoken commands into text. It leverages the whisper.cpp command-line interface for high-performance, local transcription. A recording function captures audio from the microphone, which is then processed by whisper.cpp.
+### 🔹 Core Components
+1. **Speech-to-Text (STT) — `stt.py` & `main.py`**  
+   - Converts spoken commands into text.  
+   - Uses [whisper.cpp](https://github.com/ggerganov/whisper.cpp) CLI for local, high-performance transcription.  
+   - Includes microphone recording and WAV file input support.
 
-Retrieval-Augmented Generation (RAG) (rag.py): This component manages the product inventory. It uses a pre-built index of product information, allowing it to perform fast semantic searches to find the most relevant product based on a user's spoken query. This ensures accurate item matching without needing a large, online database.
+2. **Retrieval-Augmented Generation (RAG) — `rag.py`**  
+   - Manages product inventory with a **semantic search index**.  
+   - Matches spoken item names with the closest inventory item.
 
-Large Language Model (LLM) (llm.py): A small, offline-compatible LLM (e.g., gemma3:1b) is used to generate conversational and human-friendly responses. It takes the output of the POS logic (e.g., "Added 2 apples") and formats it into a natural-sounding confirmation message or a receipt.
+3. **Large Language Model (LLM) — `llm.py`**  
+   - Uses a small, offline-compatible model (e.g., `gemma3:1b` via Ollama).  
+   - Formats POS responses into natural, human-like confirmations and receipts.
 
-Point-of-Sale (POS) Logic (pos_logic.py): This module contains the core business logic. It includes the Cart class to manage items, quantities, and totals. It also contains parsing functions (parse_multi_items) to extract the quantity and item name from the transcribed text.
+4. **POS Logic — `pos_logic.py`**  
+   - Contains the **Cart** class to manage items, quantities, and totals.  
+   - Includes parsing logic (`parse_multi_items`) to extract item names and quantities from speech.
 
-The system's flow is as follows:
-
-The user speaks a command.
-
-The record_until_enter function captures the audio and saves it to a WAV file.
-
-The whisper.cpp CLI is executed to transcribe the audio file into text.
-
-The handle_command function takes the transcribed text and uses a rule-based approach (cmd_type) to determine if the command is "add", "remove", or "checkout".
-
-If the command is "add" or "remove", the parse_multi_items function extracts the quantity and item from the text.
-
-The InventoryRAG component searches for the best match for the spoken item.
-
-The Cart object is updated, and the inventory JSON file is modified to reflect the changes.
-
-A prompt is sent to the OfflineLLM to generate a confirmation message, which is then printed to the console.
+---
 
 ## Setup Instructions
 
