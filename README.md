@@ -231,6 +231,11 @@ Okay, here's a short receipt-style summary:
 * **Total:** $66.40
 
 ---
-
+| Action | File Path | Transcription | Result |
+| :--- | :--- | :--- | :--- |
+| **Add** | `D:\offline_pos_rag\add\audio.wav` | `Add one apple.` | Okay, I’ve added one apple. The cart now contains: {'APL001': 1}. |
+| **Add** | `D:\offline_pos_rag\add\audio_2.wav` | `Add one banana and one coffee.` | Okay, I've added one banana. The cart now contains: {'APL001': 1, 'BAN001': 1}. Okay, I've added one coffee. The cart now contains: {'APL001': 1, 'BAN001': 1, 'COF001': 1}. |
+| **Remove** | `D:\offline_pos_rag\remove\audio.wav` | `Remove one coffee.` | Okay, I've removed one coffee. Now the data is: {'APL001': 1, 'BAN001': 1}. |
+| **Checkout** | `D:\offline_pos_rag\checkout\audio.wav` | `Check out.` | Okay, here's a short receipt-style summary: **Receipt Summary:** * **Items:** APL001 - 1, BAN001 - 1 * **Total:** $66.40. |
 
 
