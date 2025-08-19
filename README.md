@@ -134,12 +134,11 @@ pip install -r requirements.txt
 
 ## How to Run
 
-Start your local LLM server. For example, using Ollama: ollama run gemma:1b
-
-Navigate to the project directory in your terminal.
 
 Run the main application:
+```bash
 python main.py
+```
 
 ### Usage Example
 
@@ -233,5 +232,5 @@ Okay, here's a short receipt-style summary:
 
 ---
 
-Let me know if you’d like me to do anything else!
+
 
