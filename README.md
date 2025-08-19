@@ -70,56 +70,46 @@ pip install -r requirements.txt
 
 ### 🔹 Gemma Model Setup (with Ollama)
 
-1. Download Ollama
+1.  **Download and Install Ollama:** Get the installer for your operating system (Windows, macOS, or Linux) and run it.
+2.  **Set Ollama Path:**
+    * **Windows:** Add `C:\Users\<your-username>\AppData\Local\Programs\Ollama` to your system's `PATH` environment variable.
+    * **Linux/macOS:** The default installation path is `/usr/local/bin`, so this step is usually not required.
+3.  **Pull Gemma Model:** Open a terminal or command prompt and run:
+    ```bash
+    ollama pull gemma3:1b
+    ```
+4.  **Run Gemma:** To start using the model, execute:
+    ```bash
+    ollama run gemma3:1b
+    ```
 
-Install it on your system (Windows, macOS, or Linux).
-
-2. Set Ollama path in Environment Variables
-
-On Windows: Add Ollama installation path (usually C:\Users\<your-username>\AppData\Local\Programs\Ollama) to your PATH in Environment Variables.
-
-On Linux/macOS: Ollama installs under /usr/local/bin by default, so usually no change is needed.
-
-3. Pull Gemma model
-
-ollama pull gemma3:1b
-
-This will download the Gemma model from Ollama’s registry.
-
-4. Run Gemma
-
-ollama run gemma3:1b
-
-✅ You now have Gemma running locally with Ollama.
+---
 
 ### 🔹 Whisper.cpp Setup (Speech-to-Text)
 
-1. Clone the repository
-
-git clone https://github.com/ggerganov/whisper.cpp.git
-
-2. Enter the directory
-
-cd whisper.cpp
-
-3. Build Whisper.cpp
-
-On Linux/macOS:
-make
-
-On Windows: Open Developer Command Prompt for MSVC and run:
-make
-
-(You may need CMake + Visual Studio Build Tools.)
-
-4. Download the model
-
-Whisper.cpp provides a script to download pre-trained models:
-sh ./models/download-ggml-model.sh large-v3-turbo
-
-⚠️ Correct name is large-v3-turbo (not large_v3_turbo).
-
-Other available models: tiny, base, small, medium, large-v3, etc.
+1.  **Clone Repository:**
+    ```bash
+    git clone [https://github.com/ggerganov/whisper.cpp.git](https://github.com/ggerganov/whisper.cpp.git)
+    ```
+2.  **Navigate to Directory:**
+    ```bash
+    cd whisper.cpp
+    ```
+3.  **Build Whisper.cpp:**
+    * **Linux/macOS:**
+        ```bash
+        make
+        ```
+    * **Windows:** Open the Developer Command Prompt for MSVC and run:
+        ```bash
+        make
+        ```
+        *(Note: You may need CMake and Visual Studio Build Tools.)*
+4.  **Download Model:** Use the provided script to download a model. For `large-v3-turbo`, run:
+    ```bash
+    sh ./models/download-ggml-model.sh large-v3-turbo
+    ```
+    *(Note: The correct model name is `large-v3-turbo`.)*
 
 **Project Structure:** Ensure your file paths match the ones in
         > the main.py file, or update the paths accordingly:\
