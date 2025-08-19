@@ -40,6 +40,7 @@ The system follows a **modular, component-based architecture**:
    - Contains the **Cart** class to manage items, quantities, and totals.  
    - Includes parsing logic (`parse_multi_items`) to extract item names and quantities from speech.  
 
+---
 
 ## ⚙️ Setup Instructions  
 
@@ -67,6 +68,7 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+---
 
 ### 🔹 Gemma Model Setup (with Ollama)
 
@@ -127,6 +129,8 @@ pip install -r requirements.txt
         > │ └── Release/\
         > │ └── whisper-cli.exe\
         > └── main.py
+
+---
 
 ## How to Run
 
