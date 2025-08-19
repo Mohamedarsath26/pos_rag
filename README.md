@@ -1,4 +1,17 @@
-# Offline Voice-Activated POS System
+# 🛒 Offline Voice-Activated POS System  
+
+A fully offline Point-of-Sale system powered by **Speech-to-Text (Whisper.cpp)**, **Retrieval-Augmented Generation (RAG)**, and a lightweight **Local LLM (Gemma)**.  
+
+---
+
+## 📌 Features
+- 🎤 **Voice Commands** – Add, remove, and checkout items using speech.  
+- 🔎 **Semantic Product Search (RAG)** – Matches items from inventory.  
+- 🤖 **Offline LLM** – Generates natural confirmation messages & receipts.  
+- 🛍️ **POS Logic** – Manages cart, items, and totals offline.  
+- 🌐 **100% Offline** – Works without internet.  
+
+---
 
 ## Project Architecture
 
