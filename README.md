@@ -33,8 +33,8 @@ A prompt is sent to the OfflineLLM to generate a confirmation message, which is 
 ## Setup Instructions
 
 Clone the Repository:
-git clone [your-repo-url]
-cd [your-repo-url]
+git clone https://github.com/Mohamedarsath26/pos_rag.git
+cd pos_rag
 
 Install Python Dependencies:
 This project requires several Python packages. You can install them using pip:
